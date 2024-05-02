@@ -19,7 +19,7 @@
     "addi %[x], %[x], 16\n"  // x[i] -> x[i+8]
     "addi %[add_cnt], %[add_cnt], 3\n"
 
-    "sub %[arr_size], %[arr_size], t0\n"  // arr_size -= (number of processed numbers)
+    "sub %[arr_size], %[arr_size], t0\n"  // arr_size -= (number of processed shorts)
     "addi %[sub_cnt], %[sub_cnt], 1\n"
 
     "addi %[others_cnt], %[others_cnt], 1\n"
