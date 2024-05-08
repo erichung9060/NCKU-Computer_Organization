@@ -1,7 +1,7 @@
 #ifndef _CONSTANT_H_
 #define _CONSTANT_H_
 int arr_size = 16;
-static short int student_id = 0;//student_id = your_studnet_id % 100
+static short int student_id = 10;//student_id = your_studnet_id % 100
 static short int *h;
 static short int *x;
 static short int *y;
