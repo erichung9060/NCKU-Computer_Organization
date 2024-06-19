@@ -109,12 +109,12 @@ uint64_t* cache_sim_t::check_tag(uint64_t addr) {
 }
 
 uint64_t cache_sim_t::victimize(uint64_t addr) {
-    size_t queue_idx = (addr >> idx_shift) & (sets - 1);
-    uint64_t tags_index = tags_queue[queue_idx].front();
-    tags_queue[queue_idx].pop();
+    size_t queue_index = (addr >> idx_shift) & (sets - 1);
+    uint64_t tags_index = tags_queue[queue_index].front();
+    tags_queue[queue_index].pop();
     uint64_t victim = tags[tags_index];
     tags[tags_index] = (addr >> idx_shift) | VALID;
-    tags_queue[queue_idx].push(tags_index);
+    tags_queue[queue_index].push(tags_index);
     return victim;
 }
 
